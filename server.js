@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 var app = express();
 const fs = require('fs');
+const port = process.env.PORT || 3000;
+
 hbs.registerPartials(__dirname + '/views/partilas');
 hbs.registerHelper('getcurrentyear', () => {
     return new Date().getFullYear();
@@ -42,6 +44,6 @@ app.get('/about', (req, res) => {
     });
 })
 
-app.listen(3000, () => {
-    console.log('server is working')
+app.listen(port, () => {
+    console.log(`server is working on port ${port}`)
 });
