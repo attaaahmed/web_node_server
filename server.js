@@ -13,18 +13,19 @@ hbs.registerHelper('getcurrentyear', () => {
 app.use(express.static(__dirname + '/web'))
 app.set('view engine', 'hbs');
 app.engine('html', require('hbs').__express);
-app.use((req, res, next) => {
-    var now = new Date().toString();
-    var log = `${now}:${req.method} ${req.url}`;
-    console.log(log)
-    fs.appendFile('server.log', log + '\n', (err) => {
-        if (err) {
-            console.log('Unabel to append log to the system');
-        }
-    });
 
-    next();
-});
+// app.use((req, res, next) => {
+//     var now = new Date().toString();
+//     var log = `${now}:${req.method} ${req.url}`;
+//     console.log(log)
+//     fs.appendFile('server.log', log + '\n', (err) => {
+//         if (err) {
+//             console.log('Unabel to append log to the system');
+//         }
+//     });
+
+//     next();
+// });
 
 // app.use((req, res, next) => {
 //     res.render('main.hbs');
