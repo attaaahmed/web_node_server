@@ -5,6 +5,8 @@ const fs = require('fs');
 const port = process.env.PORT || 3000;
 
 hbs.registerPartials(__dirname + '/views/partilas');
+
+
 hbs.registerHelper('getcurrentyear', () => {
     return new Date().getFullYear();
 });
