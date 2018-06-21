@@ -29,9 +29,9 @@ app.engine('html', require('hbs').__express);
 //     next();
 // });
 
-// app.use((req, res, next) => {
-//     res.render('main.hbs');
-// })
+app.use((req, res, next) => {
+    res.render('main.hbs');
+})
 app.get('/', (req, res) => {
     res.render('site.html', {
         pagetitle: 'Home page',
