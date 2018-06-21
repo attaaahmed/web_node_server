@@ -28,25 +28,25 @@ app.engine('html', require('hbs').__express);
 
 //     next();
 // });
-
 app.use((req, res, next) => {
     res.render('main.hbs');
 })
 app.get('/', (req, res) => {
     res.render('site.html', {
-        pagetitle: 'Home page',
-
+        pagetitle: 'A Story For Wisdom',
     })
 });
 
-
-app.get('/about', (req, res) => {
-    res.render('about.hbs', {
-        pagetitle: 'About Page',
-
+app.get('/action', (req, res) => {
+    res.render('action.hbs', {
+        pagetitle: 'Action',
     });
 })
-
+app.get('/drama', (req,res)=>{
+  res.render('drama.hbs',{
+    pagetitle: 'Drama',
+  });
+})
 app.listen(port, () => {
     console.log(`server is working on port ${port}`)
 });
