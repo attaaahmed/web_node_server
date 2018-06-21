@@ -28,9 +28,10 @@ app.engine('html', require('hbs').__express);
 
 //     next();
 // });
-app.use((req, res, next) => {
-    res.render('main.hbs');
-})
+
+// app.use((req, res, next) => {
+//     res.render('main.hbs');
+// })
 app.get('/', (req, res) => {
     res.render('site.html', {
         pagetitle: 'A Story For Wisdom',
@@ -42,11 +43,25 @@ app.get('/action', (req, res) => {
         pagetitle: 'Action',
     });
 })
-app.get('/drama', (req,res)=>{
-  res.render('drama.hbs',{
-    pagetitle: 'Drama',
-  });
+app.get('/drama', (req, res) => {
+    res.render('drama.hbs', {
+        pagetitle: 'Drama',
+    });
 })
+
+app.get('/sci', (req, res) => {
+    res.render('sci-fi.hbs', {
+        pagetitle: 'Sci-Fi',
+    });
+})
+
+app.get('/thriller', (req, res) => {
+    res.render('thriller.hbs', {
+        pagetitle: 'Thriller',
+    });
+})
+
+
 app.listen(port, () => {
     console.log(`server is working on port ${port}`)
 });
