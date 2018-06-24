@@ -12,7 +12,7 @@ hbs.registerHelper('getcurrentyear', () => {
 });
 
 
-app.use(express.static(__dirname + '/web'))
+app.use(express.static(__dirname + '/web'));
 app.set('view engine', 'hbs');
 app.engine('html', require('hbs').__express);
 
@@ -29,9 +29,9 @@ app.engine('html', require('hbs').__express);
 //     next();
 // });
 
-// app.use((req, res, next) => {
-//     res.render('main.hbs');
-// })
+app.use((req, res, next) => {
+    res.render('main.hbs');
+})
 app.get('/', (req, res) => {
     res.render('site.html', {
         pagetitle: 'A Story For Wisdom',
@@ -61,6 +61,23 @@ app.get('/thriller', (req, res) => {
     });
 })
 
+app.get('/comidy', (req, res) => {
+    res.render('comidy.hbs', {
+        pagetitle: 'Comidy',
+    });
+})
+
+app.get('/horror', (req, res) => {
+    res.render('horror.hbs', {
+        pagetitle: 'Horror',
+    });
+})
+
+app.get('/romantic', (req, res) => {
+    res.render('romantic.hbs', {
+        pagetitle: 'Romantic',
+    });
+})
 
 app.listen(port, () => {
     console.log(`server is working on port ${port}`)
