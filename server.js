@@ -25,7 +25,6 @@ app.engine('html', require('hbs').__express);
 //             console.log('Unabel to append log to the system');
 //         }
 //     });
-
 //     next();
 // });
 
