@@ -11,6 +11,10 @@ hbs.registerHelper('getcurrentyear', () => {
     return new Date().getFullYear();
 });
 
+hbs.registerHelper('getcurrenttime', () => {
+    return new Date().getHours();
+});
+
 
 app.use(express.static(__dirname + '/web'));
 app.set('view engine', 'hbs');
@@ -28,9 +32,10 @@ app.engine('html', require('hbs').__express);
 //     next();
 // });
 
-app.use((req, res, next) => {
-    res.render('main.hbs');
-})
+// app.use((req, res, next) => {
+//     res.render('main.hbs');
+// });
+
 app.get('/', (req, res) => {
     res.render('site.html', {
         pagetitle: 'A Story For Wisdom',
@@ -41,12 +46,12 @@ app.get('/action', (req, res) => {
     res.render('action.hbs', {
         pagetitle: 'Action',
     });
-})
+});
 app.get('/drama', (req, res) => {
     res.render('drama.hbs', {
         pagetitle: 'Drama',
     });
-})
+});
 
 app.get('/sci', (req, res) => {
     res.render('sci-fi.hbs', {
