@@ -5,7 +5,7 @@
 }
 /*the body properties*/
 body {
-    background-color: #F3F1F1;
+    background-color: #C0956A;
     align-content: auto;
     font-weight: 500;
     margin: 0;
@@ -21,10 +21,10 @@ body {
 .box-1 {
     align-self: center;
     align-content: auto;
-    color: black;
     padding: 15px;
-    width: 400px;
-    border-width: 4px;
+    width: 1000px;
+    align-self: auto;
+    border-width:4px;
     border-style: solid;
     border-radius: 40px;
     border-color: #C24B51;
@@ -33,13 +33,10 @@ body {
 
 .box-1 p{
     text-align: justify;
-    color: black;
+    text-decoration-color: black;
 }
 
-.box-1:hover {
-    border-color: #6e1313;
-    border-style: double;
-}
+
 .box-1 .title {
     color:white;
     font-size: 28px;
@@ -72,66 +69,75 @@ body {
     color: white;
 }
 /*style in the header file*/
-.box3 {
+.dropdown {
     align-content: baseline;
-    width: auto;
+    width: -webkit-fill-available;
     margin-top: 0;
     margin-bottom: 10px;
     background-color: #C24B51;
+    border-color:#C24B51;
     border-style: solid;
     border-width: 3px;
     padding: 20px;
-    height: 70px;
+    height: 50px;
+    min-height: 40px;
 }
-/*style of the list in the header*/
-.box3 ul {
-    list-style: none;
+/* Style The Dropdown Button */
+.droptn {
+      padding: 5px;
+    margin: 0px;
     background-color: #C24B51;
-    margin: 4px;
-    color: white;
-}
-.box3 li {
-    float: left;
-    align-content: center;
-    padding: 3px;
-    color: white;
-}
-
-.box3 a:hover{
-    text-decoration: none;
-    color:white;
-    border-color: #6e1313;
-}
-.box3 a:visited{
-    text-decoration: none;
-    color:inherit;
-}
-.box3 a:link{
-    text-decoration: none;
-    color:inherit;
-}
-.box3 a:active{
-    text-decoration: none;
-    color:inherit;
-}
-.box3 a{
-    font-size: 20px;
-    color: white;
-    background-color: #C24B51;
-    text-decoration-line: none;
-    text-align: center;
-    padding: 1px;
-    border-width: 2px;
     border-style: solid;
-    border-color: #C24B51;
-    border-radius: 3px;
-    margin: 3px;
+    border-width: 2px;
+    border-color: #A24B52;
+    border-radius: 5px;
 }
 
-.box3 a:hover{
-    color: white;
-    border-color: #6e1313;
-    background-color: #6e1313;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#C24B51;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color:#A24B52;}
+
+/* Show the dropdown menu on hover */
+.droptn:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .droptn {
+    background-color:#6e1313;
+}
+/* align the menu in the header */
+.text-align {
+    display: block;
+    width: 100px;
+    background-color: #C24B51;
+    margin: 0px;
+    padding: 10px;
+    height: 80px;
 }
 .box31 {
     color: white;

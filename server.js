@@ -47,8 +47,8 @@ app.get('/action', (req, res) => {
         pagetitle: 'Action',
     });
 });
-app.get('/drama', (req, res) => {
-    res.render('drama.hbs', {
+app.get('/dramma', (req, res) => {
+    res.render('dramma.hbs', {
         pagetitle: 'Drama',
     });
 });
