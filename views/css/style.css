@@ -1,6 +1,5 @@
-<style>
-/*font of the site*/
-    . {
+*font of the site*/
+     {
     font-family: 'Times New Roman', Times, sans-serif;
 }
 /*the body properties*/
@@ -225,7 +224,7 @@ body {
 
 .box-first {
   align-items: center;
-  align: center;
+  box-align: center;
     background-color: #C24B51;
     color: whitesmoke;
     padding: 10px;
@@ -246,5 +245,3 @@ body {
     color:white;
     font-size: 28px;
 }
-
-</style>
